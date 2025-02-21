@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "9ede487b4eda82ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e0fbf64f6c0d018",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "01317a8f4881b4ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docker/Syllabus Commands.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Syllabus Commands"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "aa3dace4540aa424",
+    "type": "split",
+    "children": [
+      {
+        "id": "f872cf3baf560b24",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a94c8166e70b3cd2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c47dd35368b8e41f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "88995138cb79707d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "3ccd243022cea2da",
+    "type": "split",
+    "children": [
+      {
+        "id": "497d918d496cf539",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39011763accd7545",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "1046e873e9c20dfb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "760f34b6b0fffc65",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "fa2160c04cc8bd3b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "01317a8f4881b4ce",
+  "lastOpenFiles": [
+    "README.md",
+    "Untitled.canvas",
+    "Docker/Syllabus Commands.md",
+    "Docker/Docker Examples.md",
+    "2025-02-21.md",
+    "Docker/Syllabus.md",
+    "Docker/Cheatsheet.md",
+    "Academico/Pensul Personal.md",
+    "Docker/Docker examples.md",
+    "Docker",
+    "Academico/Pensul Personal.md~",
+    "Untitled 1",
+    "Academico"
+  ]
+}
