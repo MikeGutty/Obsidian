@@ -26,7 +26,7 @@ También empezaremos con nuestros primeros comandos:
 
 ### 2. Volumenes y Redes
 
-Esta seccion se veran los conceptos de los volumenes para persistencia de datos y redes para la comunicacion entre lo contenedores.
+Esta seccion se veran los conceptos de los volumenes para persistencia de datos y redes para la comunicacion entre lo contenedores. Con sus respectivos comandos en la seccin 2 [[Syllabus Commands]]
 
 * Terminal interactiva dentro del contenedor
 
