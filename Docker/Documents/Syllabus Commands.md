@@ -125,6 +125,92 @@ docker run -d -v /ruta/en/host:/ruta/en/contenedor mi_imagen
 
 ```
 
+### 3. Docker Compose
+
+```bash
+# Levantar contenedores
+docker-compose up
+docker-compose up -d
+
+# Detener contenedores
+docker-compose down
+docker-compose down-v # para eliminar volumenes asociados
+
+# Construir imagenes sin iniciar contenedores
+docker-compose build
+docker-compose build --no-cache
+
+# Iniciar/Detener contenedores individualmente
+docker-compose start nombre_servicio
+docker-compose stop nombre_servicio
+
+# Reiniciar contenedores
+docker-compose restart
+docker-compose restart nombre_servicio
+
+# Logs
+docker-compose logs
+docker-compose logs nombre_servicio
+docker-compose logs -f
+
+# Ejecutar comando dentro de un contenedor
+docker-compose exec nombre_servicio comando
+docker-compose exec nombre_servicio bash
+
+# Estado de los contenedores
+docker-compose ps
+
+# Eliminar contenedores
+docker-compose rm
+```
+
+### 4. Docker Build
+
+```bash
+# Construir imagen
+docker build -t nombre_imagen .
+
+# Especificar una etiqueta
+docker build -t nombre_imagen:1.0 .
+
+# Usar un Dockerfile en otra ubicacion
+docker build -t nombre_imagen -f ruta/Dockerfile .
+
+# Construccion en multiples etapas
+docker build --target etapa_intermedia -t nombre_imagen .
+
+# Publicar imagen
+docker push nombre_image:1.0
+```
+
+```bash
+# Verificar si buildx esta habilitado
+docker buildx version
+
+# Crear nuevo builder
+docker buildx create --name mi_builder --use
+
+# Segun documentacion (recomendado)
+docker buildx create \
+  --name container-builder \
+  --driver docker-container \
+  --bootstrap --use
+
+# Listar builders
+docker buildx ls
+
+# Construir una imagen con Buildx
+docker buildx build -t nombre_imagen .
+
+# Construccion multiplataforma
+docker buildx build --platform linux/amd64, linux/arm64, -t nombre_imagen .
+
+# Publicar imagen despues del build
+docker buildx build -t usuario/nombre_imagen:tag --push .
+
+# Eliminar builder
+docker buildx rm mi_builder
+```
 ### Extra
 
 ```bash
