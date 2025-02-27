@@ -211,6 +211,88 @@ docker buildx build -t usuario/nombre_imagen:tag --push .
 # Eliminar builder
 docker buildx rm mi_builder
 ```
+
+### 5. Dockerfile
+
+```bash
+# Usar una imagen base de Node.js
+FROM node:14
+
+# Establecer el directorio de trabajo
+WORKDIR /app
+
+# Copiar el archivo package.json y package-lock.json
+COPY package*.json ./
+
+# Instalar dependencias
+RUN npm install
+
+# Copiar el resto de la aplicación
+COPY . .
+
+# Exponer el puerto 3000
+EXPOSE 3000
+
+# Definir el comando para ejecutar la aplicación
+CMD ["node", "app.js"]
+```
+
+1. `FROM`
+	* Uso: `FROM <imagen>[:<tag>]`
+	* Descripción: Especifica la imagen base sobre la cual se construirá la nueva imagen.
+	* **Ejemplo**: `FROM ubuntu:20.04`
+2. `RUN`
+	* Uso: `RUN <comando>`
+	* Descripción: Ejecuta un comando en la shell durante el proceso de construcción de la imagen.
+	* **Ejemplo**: `RUN apt-get update && apt-get install -y curl`
+3. `COPY`
+	* Uso: `COPY <origen> <destino>`
+	* Descripción: Copia archivos o directorios desde el sistema de archivos local (el contexto de construcción) al sistema de archivos de la imagen.
+	* **Ejemplo**: `COPY . /app`
+4. `ADD`
+	* Uso: `ADD <origen> <destino>`
+	* Descripción: Similar a `COPY`, pero con funcionalidades adicionales como la capacidad de descargar archivos desde URLs y descomprimir archivos tar automáticamente.
+	* **Ejemplo**: `ADD https://example.com/file.tar.gz /app`
+5. `WORKDIR`
+	* Uso: `WORKDIR <directorio>`
+	* Descripción: Establece el directorio de trabajo para las instrucciones `RUN`, `CMD`, `ENTRYPOINT`, `COPY` y `ADD` que siguen.
+	* **Ejemplo**: `WORKDIR /app`
+6. `ENV`
+	* Uso: `ENV <clave>=<valor>`
+	* Descripción: Establece variables de entorno en la imagen.
+	* **Ejemplo**: `ENV NODE_ENV=production`
+7. `EXPOSE`
+	* Uso: `EXPOSE <puerto>`
+	* Descripción: Informa a Docker que el contenedor escuchará en el puerto especificado en tiempo de ejecución.
+	* **Ejemplo**: `EXPOSE 80`
+8. `CMD`
+	* Uso: `CMD ["ejecutable", "param1", "param2"]` o `CMD comando param1 param2`
+	* Descripción: Proporciona un comando por defecto y/o parámetros para un contenedor en ejecución. Solo puede haber una instrucción `CMD` en un Dockerfile.
+	* **Ejemplo**: `CMD ["python", "app.py"]`
+9. `ENTRYPOINT`
+	* Uso: `ENTRYPOINT ["ejecutable", "param1", "param2"]` o `ENTRYPOINT comando param1 param2`
+	* Descripción: Configura el comando que se ejecutará cuando el contenedor inicie. A diferencia de `CMD`, `ENTRYPOINT` no se sobrescribe fácilmente.
+	* **Ejemplo**: `ENTRYPOINT ["nginx", "-g", "daemon off;"]`
+10. `VOLUME`
+	* Uso: `VOLUME ["/ruta"]`
+	* Descripción: Crea un punto de montaje para volúmenes externos o para compartir datos entre contenedores.
+	* **Ejemplo**: `VOLUME ["/data"]`	
+11. `LABEL`
+	* Uso: `LABEL <clave>=<valor>`
+	* Descripción: Añade metadatos a la imagen en forma de pares clave-valor.
+	- **Ejemplo**: `LABEL version="1.0" description="Mi aplicación"`
+12. `ARG`
+	* Uso: `ARG <nombre>[=<valor por defecto>]`
+	* Descripción: Define una variable que los usuarios pueden pasar en tiempo de construcción con el comando `docker build --build-arg <nombre>=<valor>`.
+	* **Ejemplo**: `ARG VERSION=latest`
+13. `ONBUILD`
+	* Uso: `ONBUILD <instrucción>`
+	* Descripción: Añade una instrucción que se ejecutará cuando la imagen se use como base para otra imagen.
+	* **Ejemplo**: `ONBUILD COPY . /app/src`
+14. User
+	- **Uso**: `USER <usuario>[:<grupo>]`
+	- **Descripción**: Establece el usuario (y opcionalmente el grupo) que se utilizará para ejecutar los comandos `RUN`, `CMD` y `ENTRYPOINT`.
+	- **Ejemplo**: `USER nobody`
 ### Extra
 
 ```bash
