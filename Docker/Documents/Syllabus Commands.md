@@ -162,6 +162,12 @@ docker-compose ps
 
 # Eliminar contenedores
 docker-compose rm
+
+# Listar imagenes
+docker image ls
+
+# Eliminar imagen
+docker image rm nombre_imagen
 ```
 
 ### 4. Docker Build
@@ -177,7 +183,11 @@ docker build -t nombre_imagen:1.0 .
 docker build -t nombre_imagen -f ruta/Dockerfile .
 
 # Construccion en multiples etapas
-docker build --target etapa_intermedia -t nombre_imagen .
+docker build --target etapa_intermedia -t nombre_imagen . # Construira hasta esta etapa
+
+# Renombrar imagen
+docker image tag SOURCE[:TAG] TARGET_IMAGE[:TAG]
+docker tag IMAGE NEW_IMAGE # para crear una nueva imagen con nuevo nombre
 
 # Publicar imagen
 docker push nombre_image:1.0
@@ -203,7 +213,11 @@ docker buildx ls
 docker buildx build -t nombre_imagen .
 
 # Construccion multiplataforma
-docker buildx build --platform linux/amd64, linux/arm64, -t nombre_imagen .
+docker buildx build --platform linux/amd64, linux/arm64 -t nombre_imagen .
+docker buildx build \
+  --platform linux/amd64,linux/arm64 \
+  -t nombre_de_tu_imagen:tag \
+  --push .
 
 # Publicar imagen despues del build
 docker buildx build -t usuario/nombre_imagen:tag --push .
