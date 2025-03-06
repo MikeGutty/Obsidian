@@ -14,7 +14,7 @@ docker container run \
 --env MARIADB_DATABASE=world-db \
 --volume world-db:/var/lib/mysql \
 --network world-app \
-maridan:jammy
+mariadb:jammy
 ```
 
 * Para PhpMyAdmin
