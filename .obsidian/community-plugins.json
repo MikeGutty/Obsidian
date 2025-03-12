@@ -1,3 +1,10 @@
 [
-  "obsidian-vimrc-support"
+  "obsidian-vimrc-support",
+  "calendar",
+  "obsidian-icon-folder",
+  "colored-tags",
+  "file-explorer-note-count",
+  "code-styler",
+  "ninja-cursor",
+  "obsidian-tasks-plugin"
 ]
