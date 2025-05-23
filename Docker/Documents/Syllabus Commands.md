@@ -169,7 +169,6 @@ docker image ls
 # Eliminar imagen
 docker image rm nombre_imagen
 ```
-
 ### 4. Docker Build
 
 ```bash
