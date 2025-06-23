@@ -36,6 +36,20 @@
             }
           },
           {
+            "id": "02128b70721d8283",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docker/Documents/Syllabus.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Syllabus"
+            }
+          },
+          {
             "id": "5cfca2af8459b390",
             "type": "leaf",
             "state": {
@@ -50,7 +64,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -62,7 +76,7 @@
       {
         "id": "f872cf3baf560b24",
         "type": "tabs",
-        "dimension": 74.74747474747475,
+        "dimension": 76.82119205298014,
         "children": [
           {
             "id": "a94c8166e70b3cd2",
@@ -109,7 +123,7 @@
       {
         "id": "bf9af8002308751c",
         "type": "tabs",
-        "dimension": 25.252525252525253,
+        "dimension": 23.178807947019866,
         "children": [
           {
             "id": "37c03860b78e3b91",
@@ -190,13 +204,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academico/Pensul Personal.md",
+                "file": "Docker/Documents/Syllabus.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Pensul Personal"
+              "title": "Outline of Syllabus"
             }
           }
         ],
@@ -233,8 +247,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "710b588e2d830f18",
+  "active": "02128b70721d8283",
   "lastOpenFiles": [
+    "Docker/Documents/Cheatsheet.md",
+    "Academico/Pensul Personal.md",
     "README.md",
     "Exposicion.md",
     "Xanthops/Server/Seguros Production.md",
@@ -247,13 +263,11 @@
     "Docker/Documents/Syllabus.md",
     "Family",
     "Docker.zip",
-    "Docker/Documents/Cheatsheet.md",
     "Docker/Laboratories/Docker Examples.md",
     "Redes",
     "Docker/Laboratories/Pg-admin.md",
     "Xanthops/Server/images",
     "Xanthops/Server",
-    "Academico/Pensul Personal.md",
     "Xanthops",
     "Docker/Laboratories",
     "Docker/Documents",

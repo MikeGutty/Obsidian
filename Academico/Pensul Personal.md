@@ -2,3 +2,4 @@
 - [ ] Redes
 - [ ] Microservicios
 - [ ] Blockchain
+- [ ] Data analist (Youtube)
